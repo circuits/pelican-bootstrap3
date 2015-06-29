@@ -99,6 +99,9 @@
               title="{{ SITENAME }} {{ category }} ATOM Feed"/>
     {% endif %}
 
+    {# Mojo Helpdesk #}
+    <style type='text/css'>@import url('//asset.launch.mojohelpdesk.com/stylesheets/form_widget.css');</style>
+
 </head>
 <body>
 
@@ -202,5 +205,17 @@
 {% include 'includes/piwik.html' %}
 
 {% block scripts %}{% endblock %}
+    {# Mojo Helpdesk #}
+    <script type='text/javascript'>
+        var mojo_form_widget_params = {};
+        mojo_form_widget_params.tab_name='help';
+        mojo_form_widget_params.tab_bg_color='#333399';
+        mojo_form_widget_params.tab_top_offset='400';
+        mojo_form_widget_params.title='How can we help?';
+        mojo_form_widget_params.description='Please tell us about your request.';
+        mojo_form_widget_params.token='21473_84619';
+        mojo_form_widget_params.site_url='circuits.mojohelpdesk.com'; 
+    </script>
+    <script type='text/javascript' src='//asset.launch.mojohelpdesk.com/javascripts/form_widget.js'></script>
 </body>
 </html>
